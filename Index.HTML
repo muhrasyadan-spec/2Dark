@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pendataan Penjual Minuman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Sistem Pendataan Penjual Minuman</h1>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Tambah Data Penjual</h2>
+
+        <form id="sellerForm">
+            <input type="text" id="nama" placeholder="Nama Penjual" required>
+
+            <input type="text" id="hp" placeholder="Nomor HP" required>
+
+            <input type="text" id="alamat" placeholder="Alamat" required>
+
+            <input type="text" id="minuman" placeholder="Jenis Minuman" required>
+
+            <button type="submit">Simpan</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>Data Penjual</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>HP</th>
+                    <th>Alamat</th>
+                    <th>Minuman</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+
+            <tbody id="sellerTable">
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
