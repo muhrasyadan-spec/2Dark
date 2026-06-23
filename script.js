@@ -11,7 +11,7 @@ form.addEventListener("submit", function(e){
     const seller = {
         nama: document.getElementById("nama").value,
         hp: document.getElementById("hp").value,
-        alamat: document.getElementById("alamat").value,
+        harga: document.getElementById("harga").value,
         minuman: document.getElementById("minuman").value
     };
 
@@ -36,7 +36,7 @@ function renderData(){
         <tr>
             <td>${seller.nama}</td>
             <td>${seller.hp}</td>
-            <td>${seller.alamat}</td>
+            <td>${seller.harga}</td>
             <td>${seller.minuman}</td>
             <td>
                 <button
