@@ -10,7 +10,7 @@ form.addEventListener("submit", function(e){
 
     const seller = {
         nama: document.getElementById("nama").value,
-        hp: document.getElementById("hp").value,
+        antrian: document.getElementById("antrian").value,
         harga: document.getElementById("harga").value,
         minuman: document.getElementById("minuman").value
     };
@@ -35,7 +35,7 @@ function renderData(){
         table.innerHTML += `
         <tr>
             <td>${seller.nama}</td>
-            <td>${seller.hp}</td>
+            <td>${seller.antrian}</td>
             <td>${seller.harga}</td>
             <td>${seller.minuman}</td>
             <td>
