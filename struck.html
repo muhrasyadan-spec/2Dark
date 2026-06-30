@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Struk Pembayaran</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="struk">
+
+<h2>WARUNG MINUMAN</h2>
+
+<hr>
+
+<p>No Transaksi : TRX001</p>
+
+<p>Tanggal :
+<script>
+document.write(new Date().toLocaleDateString());
+</script>
+</p>
+
+<p>Kasir : Admin</p>
+
+<hr>
+
+<table width="100%">
+<tr>
+<td>Es Teh</td>
+<td>2</td>
+<td>10000</td>
+</tr>
+
+<tr>
+<td>Kopi Susu</td>
+<td>1</td>
+<td>12000</td>
+</tr>
+
+</table>
+
+<hr>
+
+<p>Total : Rp22.000</p>
+
+<p>Bayar : Rp25.000</p>
+
+<p>Kembalian : Rp3.000</p>
+
+<hr>
+
+<center>
+
+<button onclick="window.print()">
+
+Cetak Struk
+
+</button>
+
+</center>
+
+</div>
+
+</body>
+</html>
