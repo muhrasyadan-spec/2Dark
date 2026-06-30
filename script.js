@@ -1,62 +1,27 @@
-const form = document.getElementById("sellerForm");
-const table = document.getElementById("sellerTable");
+function login(){
 
-let sellers = JSON.parse(localStorage.getItem("sellers")) || [];
+let username=document.getElementById("username").value;
 
-renderData();
+let password=document.getElementById("password").value;
 
-form.addEventListener("submit", function(e){
-    e.preventDefault();
+if(username=="admin" && password=="12345"){
 
-    const seller = {
-        nama: document.getElementById("nama").value,
-        antrian: document.getElementById("antrian").value,
-        harga: document.getElementById("harga").value,
-        minuman: document.getElementById("minuman").value
-    };
+alert("Login Berhasil");
 
-    sellers.push(seller);
+window.location="dashboard.html";
 
-    localStorage.setItem(
-        "sellers",
-        JSON.stringify(sellers)
-    );
+}else{
 
-    form.reset();
+document.getElementById("pesan").innerHTML="Username atau Password Salah";
 
-    renderData();
-});
+document.getElementById("pesan").style.color="red";
 
-function renderData(){
-    table.innerHTML = "";
-
-    sellers.forEach((seller,index)=>{
-
-        table.innerHTML += `
-        <tr>
-            <td>${seller.nama}</td>
-            <td>${seller.antrian}</td>
-            <td>${seller.harga}</td>
-            <td>${seller.minuman}</td>
-            <td>
-                <button
-                    class="delete-btn"
-                    onclick="hapusData(${index})">
-                    Hapus
-                </button>
-            </td>
-        </tr>
-        `;
-    });
 }
 
-function hapusData(index){
-    sellers.splice(index,1);
+}
 
-    localStorage.setItem(
-        "sellers",
-        JSON.stringify(sellers)
-    );
+function logout(){
 
-    renderData();
+window.location="index.html";
+
 }
